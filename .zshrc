@@ -117,7 +117,6 @@ alias gp='git pull'
 alias gs="git status"
 alias cdcp="cd /Users/blitz/Coding-Projects"
 alias cddk="cd /Users/blitz/Desktop"
-alias cdbc="cd /Users/blitz/Code/Bootcamp"
 
 alias python=/usr/bin/python3
 
