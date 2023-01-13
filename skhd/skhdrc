@@ -14,6 +14,6 @@ shift + cmd - l : yabai -m window --warp east
 ctrl + alt - x  : yabai -m display --focus recent
 ctrl + alt - z  : yabai -m display --focus prev
 ctrl + alt - c  : yabai -m display --focus next
-ctrl + alt - 1  : yabai -m display --focus 1
-ctrl + alt - 2  : yabai -m display --focus 2
-ctrl + alt - 3  : yabai -m display --focus 3
+hyper - l  : yabai -m display --focus 1
+hyper - u  : yabai -m display --focus 2
+hyper - y  : yabai -m display --focus 3
