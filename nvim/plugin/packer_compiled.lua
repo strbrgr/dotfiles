@@ -84,6 +84,18 @@ _G.packer_plugins = {
     path = "/Users/blitz/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["barbar.nvim"] = {
+    loaded = true,
+    path = "/Users/blitz/.local/share/nvim/site/pack/packer/start/barbar.nvim",
+    url = "https://github.com/romgrk/barbar.nvim",
+    wants = { "nvim-web-devicons" }
+  },
+  catppuccin = {
+    config = { "\27LJ\2\n†\1\0\0\4\0\b\0\r6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\3\0'\2\4\0B\0\2\0029\0\5\0005\2\6\0004\3\0\0=\3\a\2B\0\2\1K\0\1\0\20color_overrides\1\0\0\nsetup\15catppuccin\frequire\27colorscheme catppuccin\bcmd\bvim\0" },
+    loaded = true,
+    path = "/Users/blitz/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/blitz/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -221,11 +233,6 @@ _G.packer_plugins = {
     path = "/Users/blitz/.local/share/nvim/site/pack/packer/start/vim-maximizer",
     url = "https://github.com/szw/vim-maximizer"
   },
-  ["vim-nightfly-guicolors"] = {
-    loaded = true,
-    path = "/Users/blitz/.local/share/nvim/site/pack/packer/start/vim-nightfly-guicolors",
-    url = "https://github.com/bluz71/vim-nightfly-guicolors"
-  },
   ["vim-surround"] = {
     loaded = true,
     path = "/Users/blitz/.local/share/nvim/site/pack/packer/start/vim-surround",
@@ -239,6 +246,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: catppuccin
+time([[Config for catppuccin]], true)
+try_loadstring("\27LJ\2\n†\1\0\0\4\0\b\0\r6\0\0\0009\0\1\0'\2\2\0B\0\2\0016\0\3\0'\2\4\0B\0\2\0029\0\5\0005\2\6\0004\3\0\0=\3\a\2B\0\2\1K\0\1\0\20color_overrides\1\0\0\nsetup\15catppuccin\frequire\27colorscheme catppuccin\bcmd\bvim\0", "config", "catppuccin")
+time([[Config for catppuccin]], false)
 -- Load plugins in order defined by `after`
 time([[Sequenced loading]], true)
 vim.cmd [[ packadd nvim-treesitter ]]

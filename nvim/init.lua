@@ -2,6 +2,8 @@ require("blitz.plugins-setup")
 require("blitz.core.options")
 require("blitz.core.keymaps")
 require("blitz.core.colorscheme")
+
+require("blitz.plugins.catppuccin")
 require("blitz.plugins.comment")
 require("blitz.plugins.nvim-tree")
 require("blitz.plugins.lualine")

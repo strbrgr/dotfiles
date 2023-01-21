@@ -33,10 +33,23 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+	use({
+		"catppuccin/nvim",
+		as = "catppuccin",
+		config = function()
+			vim.cmd("colorscheme catppuccin")
+			require("catppuccin").setup({
+				color_overrides = {},
+			})
+		end,
+	})
+
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation, use c-j to move within windows
 
 	use("szw/vim-maximizer") -- maximizes and restores current window
+
+	-- barbar
+	use({ "romgrk/barbar.nvim", wants = "nvim-web-devicons" })
 
 	-- essential plugins
 	use("tpope/vim-surround") -- add, delete, change surroundings (it's awesome)
