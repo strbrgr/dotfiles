@@ -34,6 +34,9 @@ yabai -m rule --add app="^Firefox$" manage=off
 yabai -m rule --add app="^Mail$" manage=off
 yabai -m rule --add app="^Notes$" manage=off
 yabai -m rule --add app="^Preview$" manage=off
+yabai -m rule --add app="^IINA$" manage=off
+yabai -m rule --add app="^Google Chrome$" manage=off
+yabai -m rule --add app="^kitty$" manage=off
 
 #find ~/Library/Parallels/Applications\ Menus/ -maxdepth 3 -type f | awk -F'/' '{ print $NF; }' | awk '{$1=$1};1' | sort | uniq | tr "\n" "\0" | xargs -0 -I{} yabai -m rule --add app="^{}\$" title=".*" manage=on
 
