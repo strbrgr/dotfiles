@@ -1,0 +1,9 @@
+[user]
+  name = Jochen Stierberger
+  email = jochen@stierberger.com
+
+[url "git@github.com:"]
+  insteadOf = https://github.com
+
+[init]
+  defaultBranch = main
