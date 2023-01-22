@@ -17,3 +17,10 @@ ctrl + alt - c  : yabai -m display --focus next
 hyper - l  : yabai -m display --focus 1
 hyper - u  : yabai -m display --focus 2
 hyper - y  : yabai -m display --focus 3
+
+# moves focus between windows in the current focused display
+hyper - m : yabai -m window --focus west
+hyper - n : yabai -m window --focus south
+hyper - e : yabai -m window --focus north
+hyper - i : yabai -m window --focus east
+
