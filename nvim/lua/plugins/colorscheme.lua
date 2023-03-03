@@ -1,8 +1,8 @@
 return {
 
-  -- disable tokyonight
+  -- enable tokyonight
   { "folke/tokyonight.nvim", enabled = true },
-  -- enable catppuccin
+  -- disable catppuccin
   { "catppuccin/nvim", name = "catppuccin", enabled = false },
   {
     "LazyVim/LazyVim",

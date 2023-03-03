@@ -135,4 +135,6 @@ return {
       require("mason-lspconfig").setup_handlers({ setup })
     end,
   },
+
+  { import = "plugins.extras.lang.rust" },
 }
