@@ -1,13 +1,13 @@
 return {
 
   -- disable tokyonight
-  { "folke/tokyonight.nvim", enabled = false },
+  { "folke/tokyonight.nvim", enabled = true },
   -- enable catppuccin
-  { "catppuccin/nvim", name = "catppuccin", enabled = true },
+  { "catppuccin/nvim", name = "catppuccin", enabled = false },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "tokyonight",
     },
   },
 }
