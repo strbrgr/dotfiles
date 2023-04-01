@@ -115,6 +115,8 @@ alias gco='git checkout'
 alias gd='git diff'
 alias gp='git pull'
 alias gs="git status"
+alias t="tmux attach"
+alias n="nvim"
 alias cdcp="cd /Users/blitz/Coding-Projects"
 alias cddk="cd /Users/blitz/Desktop"
 
