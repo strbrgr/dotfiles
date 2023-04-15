@@ -1,9 +1,15 @@
 return {
 
   -- enable tokyonight
-  { "folke/tokyonight.nvim", enabled = true },
-  -- disable catppuccin
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = {
+      style = "night",
+    },
+  },
   { "catppuccin/nvim", name = "catppuccin", enabled = false },
+
   {
     "LazyVim/LazyVim",
     opts = {
