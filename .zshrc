@@ -25,6 +25,7 @@ alias t="tmux"
 alias n="nvim"
 alias c="clear"
 alias ls="lsd"
+alias gcm="git checkout main"
 alias cdcp="cd /Users/blitz/Coding-Projects"
 alias cddk="cd /Users/blitz/Desktop"
 
