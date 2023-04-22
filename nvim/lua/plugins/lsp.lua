@@ -37,7 +37,7 @@ return {
       ---@type lspconfig.options
       servers = {
         jsonls = {},
-
+        tailwindcss = {},
         tsserver = {},
         lua_ls = {
           -- mason = false, -- set to false if you don't want this server to be installed with mason
