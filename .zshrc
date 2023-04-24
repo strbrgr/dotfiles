@@ -1,7 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
-source $ZSH/oh-my-zsh.sh
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 
 plugins=(
   git
@@ -30,7 +29,5 @@ alias cdcp="cd /Users/blitz/Coding-Projects"
 alias cddk="cd /Users/blitz/Desktop"
 
 alias python=/usr/bin/python3
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(starship init zsh)"
-
+source $ZSH/oh-my-zsh.sh
