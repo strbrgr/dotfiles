@@ -85,13 +85,14 @@ yabai -m config normal_window_opacity 0.50
 yabai -m config window_animation_duration 0.0
 
 ## If I close the active window, focus on any other visible window.
-yabai -m signal --add event=window_destroyed action="bash /Users/jesseskelton/CustomScripts/SwitchSpaces/window-focus-on-destroy.sh"
 # yabai -m signal --add event=space_changed action="export CUR_ACTIVE_APP=\"iTerm2\""
 
 ## Apps on specific spaces
 yabai -m rule --add app="^Google Chrome$" space=1
 yabai -m rule --add app="^Alacritty$" space=2
 yabai -m rule --add app="^Obsidian$" space=3
+yabai -m rule --add app="^Anki$" space=4
+yabai -m rule --add app="^Notes$" space=4
 
 echo "yabai configuration loaded.."
 
