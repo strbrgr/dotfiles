@@ -8,7 +8,7 @@ font:
     family: "JetBrainsMono Nerd Font"
 window:
   padding:
-    x: 22
+    x: 14
     y: 4
   dimensions:
     columns: 120
@@ -28,27 +28,28 @@ scrolling:
   history: 2000
   auto_scroll: true
 
+# Colors (Gruvbox Material Dark Medium)
 colors:
   primary:
-    background: "#1c1c1c"
-    foreground: "0xc0caf5"
+    background: "0x282828"
+    foreground: "0xdfbf8e"
 
   normal:
-    black: "0x15161e"
-    red: "0xf7768e"
-    green: "0x9ece6a"
-    yellow: "0xe0af68"
-    blue: "0x7aa2f7"
-    magenta: "0xbb9af7"
-    cyan: "0x7dcfff"
-    white: "0xa9b1d6"
+    black: "0x665c54"
+    red: "0xea6962"
+    green: "0xa9b665"
+    yellow: "0xe78a4e"
+    blue: "0x7daea3"
+    magenta: "0xd3869b"
+    cyan: "0x89b482"
+    white: "0xdfbf8e"
 
   bright:
-    black: "0x414868"
-    red: "0xf7768e"
-    green: "0x9ece6a"
-    yellow: "0xe0af68"
-    blue: "0x7aa2f7"
-    magenta: "0xbb9af7"
-    cyan: "0x7dcfff"
-    white: "0xc0caf5"
+    black: "0x928374"
+    red: "0xea6962"
+    green: "0xa9b665"
+    yellow: "0xe3a84e"
+    blue: "0x7daea3"
+    magenta: "0xd3869b"
+    cyan: "0x89b482"
+    white: "0xdfbf8e"
