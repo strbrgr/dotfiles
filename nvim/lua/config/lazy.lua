@@ -9,13 +9,19 @@ vim.opt.rtp:prepend(vim.env.LAZY or lazypath)
 require("lazy").setup({
   spec = {
     -- import LazyVim plugins
-    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
-    { import = "lazyvim.plugins.extras.formatting.prettier" },
+    { "LazyVim/LazyVim", import = "lazyvim.plugins", version = "^2.0" },
+    -- lazyvim UI extension modules
+    -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    -- lazyvim editor extension modules
+    { import = "lazyvim.plugins.extras.util.project" },
+    -- lazyvim dap core extension modules
+    { import = "lazyvim.plugins.extras.dap.core" },
+    -- lazyvim test core extension modules
+    { import = "lazyvim.plugins.extras.test.core" },
+    -- lazyvim copilot extension modules
+    -- { import = "lazyvim.plugins.extras.coding.copilot" },
     -- import/override with your plugins
     { import = "plugins" },
-    -- import any extras modules here
-    { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.lang.json" },
   },
   defaults = {
     -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
@@ -26,16 +32,16 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax", "catppuccin" } },
+  install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
       -- disable some rtp plugins
       disabled_plugins = {
         "gzip",
-        "matchit",
-        "matchparen",
-        "netrwPlugin",
+        -- "matchit",
+        -- "matchparen",
+        -- "netrwPlugin",
         "tarPlugin",
         "tohtml",
         "tutor",

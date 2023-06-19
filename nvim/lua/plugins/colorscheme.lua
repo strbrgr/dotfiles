@@ -1,19 +1,9 @@
 return {
-
-  -- enable tokyonight
-  {
-    "folke/tokyonight.nvim",
-    lazy = true,
-    opts = {
-      style = "night",
-    },
-  },
-  { "catppuccin/nvim", name = "catppuccin", enabled = false },
-
+  { "sainnhe/gruvbox-material" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "tokyonight",
+      colorscheme = "gruvbox-material",
     },
   },
 }
