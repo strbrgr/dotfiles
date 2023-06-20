@@ -12,6 +12,8 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins", version = "^2.0" },
     -- lazyvim UI extension modules
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.lang.tailwind" },
     -- lazyvim editor extension modules
     { import = "lazyvim.plugins.extras.util.project" },
     -- lazyvim dap core extension modules
