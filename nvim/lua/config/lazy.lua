@@ -13,6 +13,7 @@ require("lazy").setup({
     -- lazyvim UI extension modules
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
+    { import = "lazyvim.plugins.extras.editor.flash" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     -- lazyvim editor extension modules
     { import = "lazyvim.plugins.extras.util.project" },
