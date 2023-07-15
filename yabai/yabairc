@@ -88,8 +88,9 @@ yabai -m config window_animation_duration 0.0
 # yabai -m signal --add event=space_changed action="export CUR_ACTIVE_APP=\"iTerm2\""
 
 ## Apps on specific spaces
-yabai -m rule --add app="^Google Chrome$" space=1
-yabai -m rule --add app="^Alacritty$" space=2
+yabai -m rule --add app="^Google Chrome$" space=2
+yabai -m rule --add app="^Firefox$" space=2
+yabai -m rule --add app="^Alacritty$" space=1
 yabai -m rule --add app="^Obsidian$" space=3
 yabai -m rule --add app="^Anki$" space=4
 yabai -m rule --add app="^Notes$" space=4
