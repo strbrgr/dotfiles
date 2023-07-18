@@ -12,8 +12,10 @@ require("lazy").setup({
     { "LazyVim/LazyVim", import = "lazyvim.plugins", version = "^2.0" },
     -- lazyvim UI extension modules
     -- { import = "lazyvim.plugins.extras.ui.mini-animate" },
+    -- prettier
+    { import = "lazyvim.plugins.extras.linting.eslint" },
+    { import = "lazyvim.plugins.extras.formatting.prettier" },
     { import = "lazyvim.plugins.extras.lang.typescript" },
-    { import = "lazyvim.plugins.extras.editor.flash" },
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     -- lazyvim editor extension modules
     { import = "lazyvim.plugins.extras.util.project" },
