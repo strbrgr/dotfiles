@@ -1,116 +1,39 @@
 local wezterm = require("wezterm")
+
 return {
-	font = wezterm.font_with_fallback({ "Iosevka Term SS09 Light" }, { foreground = "#b0b0b0" }),
-	font_size = 12.0,
-	dpi = 96.0,
-	font_dirs = { "/usr/share/fonts/iosevka-term" },
-	font_rules = {
-		{
-			italic = true,
-			font = wezterm.font_with_fallback({ "Iosevka Term SS09 Light Italic" }, { foreground = "#b0b0b0" }),
+	font = wezterm.font("JetBrainsMono Nerd Font"),
+	font_size = 15,
+	warn_about_missing_glyphs = false,
+	enable_tab_bar = false,
+	color_scheme = "gruvbox_material_dark_hard",
+	color_schemes = {
+		["gruvbox_material_dark_hard"] = {
+			foreground = "#D4BE98",
+			background = "#1D2021",
+			cursor_bg = "#D4BE98",
+			cursor_border = "#D4BE98",
+			cursor_fg = "#1D2021",
+			selection_bg = "#D4BE98",
+			selection_fg = "#3C3836",
+
+			ansi = { "#1d2021", "#ea6962", "#a9b665", "#d8a657", "#7daea3", "#d3869b", "#89b482", "#d4be98" },
+			brights = { "#eddeb5", "#ea6962", "#a9b665", "#d8a657", "#7daea3", "#d3869b", "#89b482", "#d4be98" },
 		},
-		{
-			intensity = "Bold",
-			font = wezterm.font_with_fallback({ "Iosevka Term SS09 Medium" }, { foreground = "#ffffff" }),
+		["gruvbox_material_dark_medium"] = {},
+		["gruvbox_material_dark_soft"] = {},
+		["gruvbox_material_light_hard"] = {
+			foreground = "#654735",
+			background = "#F9F5D7",
+			cursor_bg = "#654735",
+			cursor_border = "#654735",
+			cursor_fg = "#F9F5D7",
+			selection_bg = "#F3EAC7",
+			selection_fg = "#4F3829",
+
+			ansi = { "#1d2021", "#ea6962", "#a9b665", "#d8a657", "#7daea3", "#d3869b", "#89b482", "#d4be98" },
+			brights = { "#eddeb5", "#ea6962", "#a9b665", "#d8a657", "#7daea3", "#d3869b", "#89b482", "#d4be98" },
 		},
-		{
-			italic = true,
-			intensity = "Bold",
-			font = wezterm.font_with_fallback({ "Iosevka Term SS09 Medium Italic" }, { foreground = "#ffffff" }),
-		},
-		{
-			intensity = "Half",
-			font = wezterm.font_with_fallback({ "Iosevka Term SS09 Extralight" }, { foreground = "#c0c0c0" }),
-		},
-		{
-			italic = true,
-			intensity = "Half",
-			font = wezterm.font_with_fallback({ "Iosevka Term SS09 Extralight Italic" }, { foreground = "#c0c0c0" }),
-		},
-	},
-	font_shaper = "Harfbuzz",
-	--font_shaper = "Allsorts",
-	--font_antialias = "Subpixel",
-	harfbuzz_features = { "kern", "liga", "clig", "calt" },
-	font_antialias = "Greyscale",
-	--font_antialias = "None",
-	--font_hinting = "Full",
-	font_hinting = "Vertical",
-	--font_hinting = "VerticalSubpixel",
-	--font_hinting = "None",
-	keys = {
-		-- Create a new tab in the same domain as the current tab
-		{ key = "t", mods = "CTRL", action = wezterm.action({ SpawnTab = "CurrentTabDomain" }) },
-		-- Create a new tab in the default domain
-		{ key = "t", mods = "ALT", action = wezterm.action({ SpawnTab = "DefaultDomain" }) },
-		-- move tabs
-		{ key = "LeftArrow", mods = "CTRL", action = wezterm.action({ MoveTabRelative = -1 }) },
-		{ key = "RightArrow", mods = "CTRL", action = wezterm.action({ MoveTabRelative = 1 }) },
-		-- move focus between tabs
-		{ key = "LeftArrow", mods = "ALT", action = wezterm.action({ ActivateTabRelative = -1 }) },
-		{ key = "RightArrow", mods = "ALT", action = wezterm.action({ ActivateTabRelative = 1 }) },
-		{ key = "1", mods = "ALT", action = wezterm.action({ ActivateTab = 0 }) },
-		{ key = "2", mods = "ALT", action = wezterm.action({ ActivateTab = 1 }) },
-		{ key = "3", mods = "ALT", action = wezterm.action({ ActivateTab = 2 }) },
-		{ key = "4", mods = "ALT", action = wezterm.action({ ActivateTab = 3 }) },
-		{ key = "5", mods = "ALT", action = wezterm.action({ ActivateTab = 4 }) },
-		{ key = "6", mods = "ALT", action = wezterm.action({ ActivateTab = 5 }) },
-		{ key = "7", mods = "ALT", action = wezterm.action({ ActivateTab = 6 }) },
-		{ key = "8", mods = "ALT", action = wezterm.action({ ActivateTab = 7 }) },
-		{ key = "9", mods = "ALT", action = wezterm.action({ ActivateTab = 8 }) },
-		{ key = "0", mods = "ALT", action = wezterm.action({ ActivateTab = -1 }) },
-	},
-	colors = {
-		tab_bar = {
-
-			-- The color of the strip that goes along the top of the window
-			background = "#262626",
-
-			-- The active tab is the one that has focus in the window
-			active_tab = {
-				-- The color of the background area for the tab
-				bg_color = "#404040",
-				-- The color of the text for the tab
-				fg_color = "#c0c0c0",
-
-				-- Specify whether you want "Half", "Normal" or "Bold" intensity for the
-				-- label shown for this tab.
-				-- The default is "Normal"
-				intensity = "Bold",
-
-				-- Specify whether you want "None", "Single" or "Double" underline for
-				-- label shown for this tab.
-				-- The default is "None"
-				underline = "None",
-
-				-- Specify whether you want the text to be italic (true) or not (false)
-				-- for this tab.  The default is false.
-				italic = false,
-
-				-- Specify whether you want the text to be rendered with strikethrough (true)
-				-- or not for this tab.  The default is false.
-				strikethrough = false,
-			},
-
-			-- Inactive tabs are the tabs that do not have focus
-			inactive_tab = {
-				bg_color = "#202020",
-				fg_color = "#808080",
-
-				-- The same options that were listed under the `active_tab` section above
-				-- can also be used for `inactive_tab`.
-			},
-
-			-- You can configure some alternate styling when the mouse pointer
-			-- moves over inactive tabs
-			inactive_tab_hover = {
-				bg_color = "#363636",
-				fg_color = "#909090",
-				italic = false,
-
-				-- The same options that were listed under the `active_tab` section above
-				-- can also be used for `inactive_tab_hover`.
-			},
-		},
+		["gruvbox_material_light_medium"] = {},
+		["gruvbox_material_light_soft"] = {},
 	},
 }
