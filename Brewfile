@@ -1,6 +1,5 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/core"
 tap "homebrew/services"
@@ -22,6 +21,7 @@ brew "tmux"
 brew "zsh-syntax-highlighting"
 brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
+brew install --cask font-jetbrains-mono
 brew "qmk/qmk/qmk"
 brew "lazygit"
 cask "font-fira-code"
@@ -31,6 +31,8 @@ cask "qmk-toolbox"
 cask 'google-chrome'
 cask 'spotify'
 cask 'iterm2'
+cask 'kitty'
+cask 'wezterm'
 cask 'iina'
 cask 'obsidian'
 cask 'raycast'
