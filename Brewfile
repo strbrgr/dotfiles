@@ -24,13 +24,14 @@ brew "koekeishiya/formulae/yabai"
 brew install --cask font-jetbrains-mono
 brew "qmk/qmk/qmk"
 brew "lazygit"
+brew install starship
+brew install lsd
 cask "font-fira-code"
 cask "font-hack-nerd-font"
 cask "karabiner-elements"
 cask "qmk-toolbox"
 cask 'google-chrome'
 cask 'spotify'
-cask 'iterm2'
 cask 'kitty'
 cask 'wezterm'
 cask 'iina'
