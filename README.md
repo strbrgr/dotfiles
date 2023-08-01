@@ -6,4 +6,5 @@
 
 - vim (NeoVim) config
 - tmux confi
-- ohmyzsh 
+- ohmyzsh
+- configuration for wezterm
