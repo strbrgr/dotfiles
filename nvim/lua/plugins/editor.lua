@@ -49,7 +49,7 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
-      { "nvim-telescope/telescope-dap.nvim" },
+      -- { "nvim-telescope/telescope-dap.nvim" },
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       { "debugloop/telescope-undo.nvim" },
     },
@@ -111,7 +111,7 @@ return {
     config = function(_, opts)
       local telescope = require("telescope")
       telescope.setup(opts)
-      telescope.load_extension("dap")
+      -- telescope.load_extension("dap")
       telescope.load_extension("fzf")
       telescope.load_extension("undo")
     end,

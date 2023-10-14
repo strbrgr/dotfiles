@@ -24,16 +24,6 @@ return {
     end,
   },
 
-  -- add rust to treesitter
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      if type(opts.ensure_installed) == "table" then
-        vim.list_extend(opts.ensure_installed, { "css", "html", "javascript", "jsdoc", "scss" })
-      end
-    end,
-  },
-
   -- correctly setup mason lsp extensions
   {
     "williamboman/mason.nvim",

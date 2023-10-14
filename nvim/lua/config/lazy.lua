@@ -19,8 +19,6 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.tailwind" },
     -- lazyvim editor extension modules
     { import = "lazyvim.plugins.extras.util.project" },
-    -- lazyvim dap core extension modules
-    { import = "lazyvim.plugins.extras.dap.core" },
     -- lazyvim test core extension modules
     { import = "lazyvim.plugins.extras.test.core" },
     -- lazyvim copilot extension modules
@@ -37,7 +35,7 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
-  install = { colorscheme = { "tokyonight", "habamax" } },
+  install = { colorscheme = { "tokyonight" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
     rtp = {
