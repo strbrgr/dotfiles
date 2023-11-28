@@ -17,14 +17,14 @@ yabai -m space 3 --label three
 yabai -m space 4 --label four
 yabai -m space 5 --label five
 yabai -m space 6 --label six
+yabai -m space 7 --label seven
+yabai -m space 8 --label eight
 # yabai -m space 9 --label nine
 
 # float system preferences. Most of these just diable Yabai form resizing them.
 yabai -m rule --add app="Raycast" manage=off
 yabai -m rule --add app="^System Preferences$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Finder$" manage=off
-yabai -m rule --add app="^Keka$" sticky=on layer=above manage=off
-yabai -m rule --add app="^Disk Utility$" sticky=on layer=above manage=off
 yabai -m rule --add app="^System Information$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Activity Monitor$" sticky=on layer=above manage=off
 yabai -m rule --add app="^Path Finder$" manage=off
@@ -38,6 +38,9 @@ yabai -m rule --add app="^Messages$" manage=off
 yabai -m rule --add app="^Transmission$" manage=off
 yabai -m rule --add app="^Mail$" manage=off
 yabai -m rule --add app="^Stocks$" manage=off
+yabai -m rule --add app="^JDownloader2$" manage=off
+yabai -m rule --add app="^Keka$" manage=off
+yabai -m rule --add app="^Disk Utility$" manage=off
 
 ## Some random global settings
 #yabai -m config focus_follows_mouse          autoraise
@@ -103,9 +106,9 @@ yabai -m rule --add app="^kitty$" space=1
 yabai -m rule --add app="^Xcode$" space=1
 yabai -m rule --add app="^Obsidian$" space=3
 yabai -m rule --add app="^Pocket$" space=4
-yabai -m rule --add app="^Anki$" space=5
 yabai -m rule --add app="^Notes$" space=4
 yabai -m rule --add app="^Spotify$" space=4
+yabai -m rule --add app="^Anki$" space=5
 yabai -m rule --add app="^Discord$" space=6
 yabai -m rule --add app="^Day One$" space=6
 yabai -m rule --add app="^Todoist$" space=6
