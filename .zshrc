@@ -22,6 +22,7 @@ alias gp='git pull'
 alias gs="git status"
 alias t="tmux"
 alias n="nvim ."
+alias np="npm run dev"
 alias c="clear"
 alias ls="lsd"
 alias ..="cd .."
