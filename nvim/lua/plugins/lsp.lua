@@ -11,6 +11,12 @@ return {
             workingDirectory = { mode = "auto" },
           },
         },
+        cssls = {
+          cmd = { "css-languageserver", "--stdio" },
+        },
+        html = {
+          cmd = { "html-languageserver", "--stdio" },
+        },
       },
       setup = {
         eslint = function()
