@@ -20,7 +20,7 @@ alias gco='git checkout'
 alias gd='git diff'
 alias gp='git pull'
 alias gs="git status"
-alias t="tmux a"
+alias t="tmux"
 alias n="nvim ."
 alias np="npm run dev"
 alias c="clear"
@@ -29,7 +29,8 @@ alias ..="cd .."
 alias gcm="git checkout main"
 alias cdcp="cd /Users/blitz/Coding-Projects"
 alias cddk="cd /Users/blitz/Desktop"
+alias python="python3"
+alias ya="yabai --restart-service"
 
-alias python=/usr/bin/python3
 eval "$(starship init zsh)"
 source $ZSH/oh-my-zsh.sh
