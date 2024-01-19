@@ -4,6 +4,7 @@
 
 -- JavaScript/TypeScript
 vim.api.nvim_create_autocmd("FileType", {
-  pattern = { "javascript", "typescript" },
-  command = "setlocal textwidth=80 shiftwidth=2 tabstop=2",
-})
+    pattern = { "javascript", "typescript" },
+    command = "setlocal textwidth=80 shiftwidth=2 tabstop=2",
+  })
+  
