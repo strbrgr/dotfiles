@@ -4,7 +4,7 @@ return {
     opts = {
       diagnostics = {
         -- Removes inline hints as they don't support line-breaks. Use leader-"ee" instead
-        virtual_text = false,
+        virtual_text = true,
       },
       ---@type lspconfig.options
       servers = {
@@ -18,4 +18,3 @@ return {
     },
   },
 }
-
