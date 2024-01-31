@@ -34,3 +34,9 @@ alias ya="yabai --restart-service"
 
 eval "$(starship init zsh)"
 source $ZSH/oh-my-zsh.sh
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/blitz/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/blitz/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/blitz/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/blitz/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
