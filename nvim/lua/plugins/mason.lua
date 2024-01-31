@@ -8,9 +8,8 @@ return {
         "css-lsp",
         "html-lsp",
         "svelte-language-server",
-        "prettierd",
+        "prettier",
       },
     },
   },
 }
-
