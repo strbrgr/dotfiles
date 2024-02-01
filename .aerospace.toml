@@ -1,0 +1,123 @@
+# Reference: https://github.com/i3/i3/blob/next/etc/config
+
+enable-normalization-flatten-containers = true
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+[mode.main.binding]
+# alt-enter = 'exec-and-forget open -n /Applications/kitty.app'
+
+# alt-shift-c = 'reload-config'
+# alt-shift-r = 'reload-config'
+#
+# alt-k = 'focus up'
+# alt-j = 'focus down'
+# alt-h = 'focus left'
+# alt-l = 'focus right'
+#
+# alt-shift-k = 'move-through up'
+# alt-shift-j = 'move-through down'
+# alt-shift-h = 'move-through left'
+# alt-shift-l = 'move-through right'
+
+# alt-g = 'split horizontal'
+# alt-v = 'split vertical'
+
+# alt-f = 'fullscreen'
+# alt-shift-q = 'close'
+#
+# alt-s = 'layout v_accordion' # 'layout stacking' in i3
+# alt-w = 'layout h_accordion' # 'layout tabbed' in i3
+# alt-e = 'layout tiles horizontal vertical' # 'layout toggle split' in i3
+#
+# alt-shift-space = 'layout floating tiling' # 'floating toggle' in i3
+
+# Not supported, because this command is redundant in AeroSpace mental model.
+# See: https://nikitabobko.github.io/AeroSpace/guide.html#floating-windows
+#alt-space = 'focus toggle_tiling_floating'
+
+# `focus parent`/`focus child` are not yet supported, and it's not clear whether they
+# should be supported at all https://github.com/nikitabobko/AeroSpace/issues/5
+# alt-a = 'focus parent'
+
+# chat
+alt-1 = 'workspace 1'
+# ide
+alt-2 = 'workspace 2'
+# terminal
+alt-3 = 'workspace 3'
+# browser
+alt-4 = 'workspace 4'
+# virtualization
+alt-5 = 'workspace 5'
+# emails
+alt-6 = 'workspace 6'
+# devtools
+alt-7 = 'workspace 7'
+# gaming
+alt-8 = 'workspace 8'
+
+alt-shift-1 = 'move-node-to-workspace 1'
+alt-shift-2 = 'move-node-to-workspace 2'
+alt-shift-3 = 'move-node-to-workspace 3'
+alt-shift-4 = 'move-node-to-workspace 4'
+alt-shift-5 = 'move-node-to-workspace 5'
+alt-shift-6 = 'move-node-to-workspace 6'
+alt-shift-7 = 'move-node-to-workspace 7'
+alt-shift-8 = 'move-node-to-workspace 8'
+
+# alt-shift-h = 'move-node-to-workspace prev'
+# alt-shift-l = 'move-node-to-workspace next'
+
+ctrl-alt-shift-h = 'move-workspace-to-monitor prev'
+ctrl-alt-shift-l = 'move-workspace-to-monitor next'
+
+alt-r = 'mode resize'
+
+[mode.resize.binding]
+# h = 'resize width -50'
+# j = 'resize height +50'
+# k = 'resize height -50'
+# l = 'resize width +50'
+# enter = 'mode main'
+# esc = 'mode esc'
+
+[[on-window-detected]]
+if.app-id = 'net.kovidgoyal.kitty'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefox'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'net.ankiweb.dtop'
+run = 'move-node-to-workspace 5'
+
+# [[on-window-detected]]
+# if.app-id = 'com.jetbrains.intellij'
+# if.window-title-regex-substring
+# run = 'layout floating
+
+# left 'DELL U2715H (2)'
+# right 'DELL U2715H (1)'
+# center LC32G5xT
+[workspace-to-monitor-force-assignment]
+# 1 = 'DELL U2715H (1)'                   
+# 2 = 'LC32G5xT'            
+# 3 = 'DELL U2715H (2)'    
+# 4 = 'DELL U2715H (1)'   
+# 5 = '^built-in retina display$'  
+# 6 = 'secondary'
+
