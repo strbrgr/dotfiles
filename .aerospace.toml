@@ -17,6 +17,8 @@ alt-shift-ctrl-period = 'workspace 3'
 alt-shift-ctrl-n = 'workspace 4'
 alt-shift-ctrl-e = 'workspace 5'
 alt-shift-ctrl-m = 'workspace m'
+alt-shift-ctrl-f = 'workspace f'
+alt-shift-ctrl-d = 'workspace d'
 
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty'
@@ -63,6 +65,10 @@ if.app-id = 'com.tinyspeck.slackmacgap'
 run = 'move-node-to-workspace m'
 
 [[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'move-node-to-workspace f'
+
+[[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = 'layout floating'
 
@@ -77,8 +83,3 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'org.m0k.transmission'
 run = 'layout floating'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.finder'
-run = 'layout floating'
-
