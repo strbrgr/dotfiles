@@ -19,6 +19,7 @@ alt-shift-ctrl-e = 'workspace 5'
 alt-shift-ctrl-m = 'workspace m'
 alt-shift-ctrl-f = 'workspace f'
 alt-shift-ctrl-d = 'workspace d'
+alt-shift-ctrl-p = 'workspace p'
 
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty'
@@ -79,6 +80,10 @@ run = 'layout floating'
 [[on-window-detected]]
 if.app-id = 'com.apple.Preview'
 run = 'move-node-to-workspace p'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.Reminders'
+run = 'move-node-to-workspace r'
 
 [[on-window-detected]]
 if.app-id = 'org.m0k.transmission'
