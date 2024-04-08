@@ -14,6 +14,7 @@ return {
       "luap",
       "python",
       "query",
+      "svelte",
       "tsx",
       "typescript",
       "vim",
