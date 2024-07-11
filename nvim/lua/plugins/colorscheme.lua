@@ -1,9 +1,9 @@
 return {
-  { "sainnhe/gruvbox-material" },
+  { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "gruvbox-material",
+      colorscheme = "gruvbox",
     },
   },
 }
