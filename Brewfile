@@ -18,7 +18,6 @@ brew "fd"
 brew "node@16"
 brew "tmux"
 brew "zsh-syntax-highlighting"
-brew "koekeishiya/formulae/yabai"
 brew install --cask font-jetbrains-mono
 brew "qmk/qmk/qmk"
 brew "lazygit"
@@ -31,7 +30,6 @@ cask "qmk-toolbox"
 cask 'google-chrome'
 cask 'spotify'
 cask 'kitty'
-cask 'wezterm'
 cask 'iina'
 cask 'obsidian'
 cask 'raycast'
