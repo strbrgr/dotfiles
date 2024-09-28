@@ -20,6 +20,7 @@ alt-shift-ctrl-m = 'workspace m'
 alt-shift-ctrl-f = 'workspace f'
 alt-shift-ctrl-d = 'workspace d'
 alt-shift-ctrl-p = 'workspace p'
+alt-shift-ctrl-r = 'workspace r'
 
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty'
