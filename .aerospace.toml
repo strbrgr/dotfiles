@@ -16,11 +16,11 @@ alt-shift-ctrl-comma = 'workspace 2'
 alt-shift-ctrl-period = 'workspace 3'
 alt-shift-ctrl-n = 'workspace 4'
 alt-shift-ctrl-e = 'workspace 5'
-alt-shift-ctrl-m = 'workspace m'
+# alt-shift-ctrl-m = 'workspace m'
 alt-shift-ctrl-f = 'workspace f'
-alt-shift-ctrl-d = 'workspace d'
+# alt-shift-ctrl-d = 'workspace d'
 alt-shift-ctrl-p = 'workspace p'
-alt-shift-ctrl-r = 'workspace r'
+# alt-shift-ctrl-r = 'workspace r'
 
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty'
@@ -46,25 +46,25 @@ run = 'move-node-to-workspace 4'
 if.app-id = 'net.ankiweb.dtop'
 run = 'move-node-to-workspace 5'
 
-[[on-window-detected]]
-if.app-id = 'com.docker.docker'
-run = 'move-node-to-workspace d'
+# [[on-window-detected]]
+# if.app-id = 'com.docker.docker'
+# run = 'move-node-to-workspace d'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.systempreferences'
 run = 'layout floating'
 
-[[on-window-detected]]
-if.app-id = 'com.apple.MobileSMS'
-run = 'move-node-to-workspace t'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.mail'
-run = 'move-node-to-workspace m'
-
-[[on-window-detected]]
-if.app-id = 'com.tinyspeck.slackmacgap'
-run = 'move-node-to-workspace m'
+# [[on-window-detected]]
+# if.app-id = 'com.apple.MobileSMS'
+# run = 'move-node-to-workspace t'
+#
+# [[on-window-detected]]
+# if.app-id = 'com.apple.mail'
+# run = 'move-node-to-workspace m'
+#
+# [[on-window-detected]]
+# if.app-id = 'com.tinyspeck.slackmacgap'
+# run = 'move-node-to-workspace m'
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
@@ -75,17 +75,13 @@ if.app-id = 'com.google.Chrome'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-id = 'com.intuit.turbotax.2023'
+if.app-id = 'com.apple.Preview'
 run = 'layout floating'
 
-[[on-window-detected]]
-if.app-id = 'com.apple.Preview'
-run = 'move-node-to-workspace p'
-
-[[on-window-detected]]
-if.app-id = 'com.apple.Reminders'
-run = 'move-node-to-workspace r'
-
+# [[on-window-detected]]
+# if.app-id = 'com.apple.Reminders'
+# run = 'move-node-to-workspace r'
+#
 [[on-window-detected]]
 if.app-id = 'org.m0k.transmission'
 run = 'layout floating'
