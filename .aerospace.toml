@@ -6,7 +6,6 @@ after-startup-command = []
 
 # Start AeroSpace at login
 start-at-login = true
-
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
@@ -16,6 +15,7 @@ alt-shift-ctrl-comma = 'workspace 2'
 alt-shift-ctrl-period = 'workspace 3'
 alt-shift-ctrl-n = 'workspace 4'
 alt-shift-ctrl-e = 'workspace 5'
+alt-shift-ctrl-i = 'workspace 6'
 # alt-shift-ctrl-m = 'workspace m'
 alt-shift-ctrl-f = 'workspace f'
 # alt-shift-ctrl-d = 'workspace d'
@@ -45,6 +45,10 @@ run = 'move-node-to-workspace 4'
 [[on-window-detected]]
 if.app-id = 'net.ankiweb.dtop'
 run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+if.app-id = 'com.goodnotesapp.x'
+run = 'move-node-to-workspace 6'
 
 # [[on-window-detected]]
 # if.app-id = 'com.docker.docker'
