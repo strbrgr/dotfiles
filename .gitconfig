@@ -1,6 +1,6 @@
 [user]
   name = Jochen Stierberger
-  email = jochen@stierberger.com
+	email = jocsti@web.de
 
 [url "git@github.com:"]
   insteadOf = https://github.com
@@ -20,6 +20,7 @@
   gld = git log --pretty=format:"%C(yellow)%h\\ %C(green)%ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --graph
   gls = git log --pretty=format:"%C(green)%h\\ %C(yellow)[%ad]%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
   gst = git status --short --branch
+
 [color]  
   diff = auto  
   status = auto  
