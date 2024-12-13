@@ -4,7 +4,7 @@
 
 ## Contents
 
-- vim (NeoVim) config
-- tmux confi
-- ohmyzsh
-- configuration for wezterm
+- fish (shell)
+- wezterm(terminal)
+- nvim (ide)
+- tmux (terminal multiplexer)
