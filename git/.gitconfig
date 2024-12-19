@@ -1,7 +1,3 @@
-[user]
-  name = Jochen Stierberger
-	email = jocsti@web.de
-
 [url "git@github.com:"]
   insteadOf = https://github.com
 
