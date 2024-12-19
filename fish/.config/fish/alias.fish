@@ -9,3 +9,12 @@ end
 function n
     nvim .
 end
+
+function c
+    clear
+end
+
+function tks
+    clear
+    tmux kill-server
+end
