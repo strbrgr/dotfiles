@@ -18,3 +18,7 @@ function tks
     clear
     tmux kill-server
 end
+
+function t
+    tmux
+end
