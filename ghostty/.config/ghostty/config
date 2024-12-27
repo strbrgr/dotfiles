@@ -1,0 +1,6 @@
+font-family = JetBrainsMono Bold
+theme = "GruvboxDarkHard"
+macos-titlebar-style = hidden
+background-opacity = 0.9
+window-padding-x = 18
+window-padding-y = 16
