@@ -5,6 +5,5 @@ background-blur-radius = 20
 window-padding-x = 18
 window-padding-y = 16
 font-family = "JetBrainsMono NFM Bold"
-font-style-bold = true
 font-size = 15
 font-thicken = true
