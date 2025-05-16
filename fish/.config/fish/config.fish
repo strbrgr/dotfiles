@@ -7,6 +7,9 @@ set fish_greeting
 # Source cargo
 source "$HOME/.cargo/env.fish"
 
+# rust analyzer
+set -Ux PATH $HOME/.local/bin $PATH
+
 ## Flamgraph autocompletions 
 #flamegraph --completions fish >~/.config/fish/completions
 
