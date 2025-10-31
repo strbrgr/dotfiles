@@ -5,6 +5,5 @@
 ## Contents
 
 - fish (shell)
-- ghostty (terminal)
+- wezterm (terminal)
 - nvim (ide)
-- tmux (terminal multiplexer)
