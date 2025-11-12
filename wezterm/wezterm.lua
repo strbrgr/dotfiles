@@ -1,43 +1,60 @@
 local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local act = wezterm.action
+local projects = require("projects")
 
-config.color_scheme = "Gruvbox dark, pale (base16)"
-config.font = wezterm.font("JetBrainsMono Nerd Font", { weight = "Medium" })
+config.color_scheme = "tokyonight_night"
+config.font = wezterm.font_with_fallback({
+	{ family = "JetBrainsMono Nerd Font", weight = "Medium" },
+	"Noto Sans CJK SC",
+})
+
 config.font_size = 16
-
 -- fullscreen mode on 13" MBP
 config.initial_rows = 100
 config.initial_cols = 205
-
 config.window_close_confirmation = "NeverPrompt"
-
 -- configures whether the window has a title bar and/or resizable border
 config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.8
 config.macos_window_background_blur = 20
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true
-
 -- adds effect to the inactive pane
 config.inactive_pane_hsb = {
 	saturation = 0.25,
 	brightness = 0.5,
 }
 
+-- Format tab title to show only the folder name
+wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
+	local title = tab.tab_title
+	-- If the tab title is not set, use the active pane title
+	if title and #title > 0 then
+		return title
+	end
+	-- Otherwise extract the folder name from the current working directory
+	local cwd = tab.active_pane.current_working_dir
+	if cwd then
+		local folder = cwd.file_path or cwd
+		-- Extract just the last folder name
+		title = folder:match("([^/]+)/?$") or folder
+	else
+		title = tab.active_pane.title
+	end
+	return " " .. title .. " "
+end)
+
 -- leader key
 config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 2000 }
-
 config.keys = {
 	-- create a new Tab
 	{ key = "c", mods = "LEADER", action = act.SpawnTab("CurrentPaneDomain") },
 	-- close tab
 	{ key = "x", mods = "LEADER", action = wezterm.action.CloseCurrentTab({ confirm = true }) },
-
 	-- navigate Tabs
 	{ key = "p", mods = "LEADER", action = act.ActivateTabRelative(-1) },
 	{ key = "n", mods = "LEADER", action = act.ActivateTabRelative(1) },
-
 	-- rename Tab
 	{
 		key = ",",
@@ -55,8 +72,19 @@ config.keys = {
 			end),
 		}),
 	},
+	{
+		key = "s",
+		mods = "LEADER",
+		-- Present in to our project picker
+		action = projects.choose_project(),
+	},
+	{
+		key = "f",
+		mods = "LEADER",
+		-- Present a list of existing workspaces
+		action = wezterm.action.ShowLauncherArgs({ flags = "FUZZY|WORKSPACES" }),
+	},
 }
-
 -- switch to tabs with index
 for i = 1, 9 do
 	table.insert(config.keys, {
@@ -65,5 +93,4 @@ for i = 1, 9 do
 		action = act.ActivateTab(i - 1),
 	})
 end
-
 return config
