@@ -28,3 +28,7 @@ end
 # Alias'
 alias n="nvim ."
 alias c="clear"
+alias ..="cd .."
+alias ...="cd ../.."
+alias gc-="git checkout -"
+alias gcb="git checkout -b"
