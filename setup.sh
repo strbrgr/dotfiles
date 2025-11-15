@@ -87,17 +87,26 @@ copy_dotfiles() {
   # Create ~/.config if it doesn't exist
   mkdir -p "$CONFIG_DIR"
 
-  # Copy files from the repository to ~/.config
-  # This assumes your repo structure mirrors the ~/.config structure
-  if [ -d "$source_dir/.config" ]; then
-    # If repo has a .config directory, copy its contents
-    cp -r "$source_dir/.config/"* "$CONFIG_DIR/"
-    print_success "Dotfiles copied from .config directory"
-  else
-    # Otherwise, copy everything directly
-    cp -r "$source_dir/"* "$CONFIG_DIR/"
-    print_success "Dotfiles copied from repository root"
-  fi
+  # List of directories to copy to ~/.config
+  local config_dirs=(
+    "nvim"
+    "wezterm"
+    "fish"
+    # Add more config directories here as needed
+  )
+
+  # Copy each config directory
+  for dir in "${config_dirs[@]}"; do
+    if [ -d "$source_dir/$dir" ]; then
+      print_info "Copying $dir..."
+      cp -r "$source_dir/$dir" "$CONFIG_DIR/"
+      print_success "$dir copied"
+    else
+      print_info "Skipping $dir (not found in repository)"
+    fi
+  done
+
+  print_success "Dotfiles copied to $CONFIG_DIR"
 }
 
 # Main setup process
