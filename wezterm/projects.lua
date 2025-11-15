@@ -29,7 +29,7 @@ function module.choose_project()
 		title = "Projects",
 		choices = choices,
 		fuzzy = true,
-		action = wezterm.action_callback(function(child_window, child_pane, _, label)
+		action = wezterm.action_callback(function(child_window, child_pane, id, label)
 			-- "label" may be empty if nothing was selected. Don't bother doing anything
 			-- when that happens.
 			if not label then
