@@ -16,7 +16,7 @@ config.initial_cols = 205
 config.window_close_confirmation = "NeverPrompt"
 -- configures whether the window has a title bar and/or resizable border
 config.window_decorations = "RESIZE"
-config.window_background_opacity = 0.8
+config.window_background_opacity = 1.0
 config.macos_window_background_blur = 20
 config.use_fancy_tab_bar = false
 config.tab_bar_at_bottom = true

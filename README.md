@@ -11,6 +11,7 @@ To set up these dotfiles on your system, use the included `sync.sh` script:
 ```
 
 This script will:
+
 - Create symlinks from this repository to the appropriate locations in your home directory
 - Automatically back up any existing config files (with `.backup` extension)
 - Link configurations for Fish, Git, Neovim, and WezTerm
@@ -35,7 +36,7 @@ A GPU-accelerated terminal emulator written in Rust.
 
 **Configuration highlights:**
 
-- Tokyo Night color scheme with 80% opacity and blur effects
+- Tokyo Night color scheme
 - JetBrains Mono Nerd Font at 16pt
 - tmux-style keybindings with `Ctrl+b` as leader key
 - **Project picker** (`Leader + s`) - quickly switch between projects in ~/Code
