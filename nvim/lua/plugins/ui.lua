@@ -1,4 +1,5 @@
 return {
+  { "catppuccin/nvim", enabled = false },
   {
     "ellisonleao/gruvbox.nvim",
     priority = 1000,
