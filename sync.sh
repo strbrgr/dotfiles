@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Directory containing your dotfiles repo
-DOTFILES_DIR="$HOME/Code/dotfiles"
+DOTFILES_DIR="$HOME/Code/strbrgr/dotfiles"
 
 # Function to create a symlink
 link_file() {
@@ -27,5 +27,6 @@ link_file "fish/config.fish" "$HOME/.config/fish/config.fish"
 link_file "git/.gitconfig" "$HOME/.gitconfig"
 link_file "nvim" "$HOME/.config/nvim"
 link_file "wezterm" "$HOME/.config/wezterm"
+link_file "ghostty/config" "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 
 echo "Done!"
