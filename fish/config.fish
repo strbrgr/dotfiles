@@ -35,3 +35,14 @@ alias gcb="git checkout -b"
 alias gcm="git checkout main"
 alias cnr="cargo run"
 alias cnr="cargo nextest run"
+
+# Go installation
+set -gx GOROOT /usr/local/go
+set -gx GOPATH $HOME/go
+
+# Add Go binaries to PATH
+fish_add_path $GOROOT/bin
+fish_add_path $GOPATH/bin
+
+# opencode
+fish_add_path /Users/blitz/.opencode/bin
