@@ -1,31 +1,30 @@
 set -gx EDITOR nvim
+set -gx VISUAL $EDITOR
 
-# Set the path to binaries
-set -gx PATH /opt/homebrew/bin $PATH
+# Disable the new-user greeting.
+set -g fish_greeting
 
-# Disable new user greeting.
-set fish_greeting
+# Load Cargo's Fish integration when Rust is installed.
+if test -f "$HOME/.cargo/env.fish"
+    source "$HOME/.cargo/env.fish"
+end
 
-# Source cargo
-source "$HOME/.cargo/env.fish"
-
-# rust analyzer
-set -Ux PATH $HOME/.local/bin $PATH
-
-# Source node
-fish_add_path /opt/homebrew/opt/node@22/bin
-
-# Added by LM Studio CLI (lms)
-set -gx PATH $PATH /Users/blitz/.lmstudio/bin
+# Keep PATH changes local to this config instead of writing Fish universal
+# variables on every shell startup. fish_add_path also deduplicates entries
+# and ignores directories that are not present on this machine.
+fish_add_path --global --prepend \
+    /opt/homebrew/bin \
+    /opt/homebrew/opt/node@22/bin \
+    "$HOME/.cargo/bin" \
+    "$HOME/.local/bin" \
+    "$HOME/.opencode/bin" \
+    "$HOME/.lmstudio/bin"
 
 # pnpm
-set -gx PNPM_HOME /Users/blitz/Library/pnpm
-if not string match -q -- $PNPM_HOME $PATH
-    set -gx PATH "$PNPM_HOME" $PATH
-end
-# pnpm end
+set -gx PNPM_HOME "$HOME/Library/pnpm"
+fish_add_path --global --prepend "$PNPM_HOME"
 
-# Alias'
+# Aliases
 alias n="nvim ."
 alias c="clear"
 alias ..="cd .."
@@ -34,15 +33,15 @@ alias gc-="git checkout -"
 alias gcb="git checkout -b"
 alias gcm="git checkout main"
 alias cnr="cargo run"
-alias cnr="cargo nextest run"
+alias cnext="cargo nextest run"
 
 # Go installation
-set -gx GOROOT /usr/local/go
-set -gx GOPATH $HOME/go
+if command -q go
+    set -gx GOROOT (go env GOROOT)
+    set -gx GOPATH (go env GOPATH)
+else
+    set -gx GOROOT /usr/local/go
+    set -gx GOPATH "$HOME/go"
+end
 
-# Add Go binaries to PATH
-fish_add_path $GOROOT/bin
-fish_add_path $GOPATH/bin
-
-# opencode
-fish_add_path /Users/blitz/.opencode/bin
+fish_add_path --global --prepend "$GOROOT/bin" "$GOPATH/bin"
