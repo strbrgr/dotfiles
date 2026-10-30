@@ -24,6 +24,7 @@ link_file() {
 
 # Create all symlinks
 link_file "fish/config.fish" "$HOME/.config/fish/config.fish"
+link_file "fish/fish_plugins" "$HOME/.config/fish/fish_plugins"
 link_file "git/.gitconfig" "$HOME/.gitconfig"
 link_file "nvim" "$HOME/.config/nvim"
 link_file "wezterm" "$HOME/.config/wezterm"
