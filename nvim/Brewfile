@@ -1,0 +1,4 @@
+# Nix tools used by the Neovim configuration on macOS.
+# Mason's nixfmt package only provides Linux binaries.
+brew "nixfmt"
+brew "statix"
