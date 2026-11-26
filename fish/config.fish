@@ -45,3 +45,7 @@ else
 end
 
 fish_add_path --global --prepend "$GOROOT/bin" "$GOPATH/bin"
+
+if status is-interactive; and command -q zoxide
+    zoxide init fish | source
+end
